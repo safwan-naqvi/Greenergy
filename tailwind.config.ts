@@ -40,6 +40,7 @@ const config = {
         "4xl": "clamp(3.05rem, 3.54vw + 2.17rem, 5rem)",
         "5xl": "clamp(3.81rem, 5.18vw + 2.52rem, 6.66rem)",
         "6xl": "clamp(4.77rem, 7.48vw + 2.9rem, 8.88rem)",
+        hero: "clamp(4.77rem, 7.48vw + 2.9rem, 6rem)",
       },
       colors: {
         border: "hsl(var(--border))",
