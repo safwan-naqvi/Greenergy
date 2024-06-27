@@ -4,6 +4,7 @@ import { Metadata } from "next/types";
 import "./globals.css";
 import { Inter } from 'next/font/google'
 import Header from "@/components/layouts/header/Header";
+import Footer from "@/components/layouts/footer/Footer";
 const myFont = localFont({
   src: "../../public/HousttelySignature-GOonZ.ttf",
   variable: "--font-house",
@@ -26,7 +27,7 @@ export default function RootLayout({
         <div className="content_container">
           <Header />
           {children}
-          {/* <FooterComponent /> */}
+          <Footer />
         </div>
       </body>
     </html>
