@@ -34,7 +34,7 @@ const Header = () => {
                 </div>
                 <div className='flex gap-2 z-10'>
                     <Link href={"/"} className="group [transform:translateZ(0)] text-gray-300 border-2 py-3 px-5 rounded-full overflow-hidden relative before:absolute before:bg-primary-700 before:bottom-0 before:left-0 before:h-full before:w-full before:-translate-x-full hover:before:translate-x-0 before:transition before:ease-in-out before:duration-500"><span className="relative z-0 group-hover:text-gray-200 transition ease-in-out duration-500">Get Started</span></Link>
-                    <button onClick={toggleMenu} className='md:hidden px-4 flex items-center justify-center rounded-full border-2'>
+                    <button onClick={toggleMenu} className='md:hidden px-4 flex items-center justify-center rounded-full border-2 border-white'>
                         <Menu color='#fff' />
                     </button>
                 </div>
