@@ -18,13 +18,13 @@ const Header = () => {
         }
     }, [size.width])
     return (
-        <header className='fixed border-b md:border-none bg-secondary-950 md:bg-transparent w-full py-6'>
+        <header className='fixed border-b md:border-none bg-secondary-950 md:bg-transparent w-full py-6 z-[9999]'>
             <div className='container flex justify-between'>
                 <div className='flex items-center gap-10'>
                     <Link href={"/"} className='z-10'>
                         <Logo />
                     </Link>
-                    <nav className={clsx('flex gap-8 list-none bg-secondary-950 absolute md:relative md:translate-y-0 h-screen md:h-fit w-screen md:w-fit right-0 top-0 text-white flex-col items-center justify-center md:flex-row transition duration-800 ease-in-out', showMenu ? "translate-y-0" : "-translate-y-full")}>
+                    <nav className={clsx('flex gap-8 list-none bg-secondary-950 md:bg-transparent absolute md:relative md:translate-y-0 h-screen md:h-fit w-screen md:w-fit right-0 top-0 text-white flex-col items-center justify-center md:flex-row transition duration-800 ease-in-out', showMenu ? "translate-y-0" : "-translate-y-full")}>
                         {headerData.header.map((item, index) => {
                             return <li key={index}>
                                 <Link href={item.href} className='capitalize'>{item.label}</Link>
