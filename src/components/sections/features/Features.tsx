@@ -25,7 +25,7 @@ const Features = () => {
                             <button className='text-primary-950 font-semibold tracking-tight hover:underline'>Read More</button>
                         </div>
                         <div className='flex flex-col gap-6 items-start'>
-                            <Image src={"/se.svg"} alt='Solar Energy' height={50} width={50} />
+                            <Image src={"/se_img.svg"} alt='Solar Energy' height={50} width={50} />
                             <div>
                                 <h3 className='text-lg font-semibold tracking-tight my-2'>Solar Energy</h3>
                                 <p className='text-neutral-800 tracking-tight'>
@@ -35,7 +35,7 @@ const Features = () => {
                             <button className='text-primary-950 font-semibold tracking-tight hover:underline'>Read More</button>
                         </div>
                         <div className='flex flex-col gap-6 items-start'>
-                            <Image src={"/we.svg"} alt='Wind Energy' height={50} width={50} />
+                            <Image src={"/we_img.svg"} alt='Wind Energy' height={50} width={50} />
                             <div>
                                 <h3 className='text-lg font-semibold tracking-tight my-2'>Wind Energy</h3>
                                 <p className='text-neutral-800 tracking-tight'>
@@ -45,7 +45,7 @@ const Features = () => {
                             <button className='text-primary-950 font-semibold tracking-tight hover:underline'>Read More</button>
                         </div>
                         <div className='flex flex-col gap-6 items-start'>
-                            <Image src={"/hp.svg"} alt='HydroPower' height={50} width={50} />
+                            <Image src={"/hp_img.svg"} alt='HydroPower' height={50} width={50} />
                             <div>
                                 <h3 className='text-lg font-semibold tracking-tight my-2'>HydroPower</h3>
                                 <p className='text-neutral-800 tracking-tight'>
