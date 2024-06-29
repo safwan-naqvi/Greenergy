@@ -10,7 +10,7 @@ import Section from "@/components/layouts/section/Section";
 import Container from "@/components/layouts/container/Container";
 import Heading from "@/components/elements/heading/Heading";
 import { Button } from "@/components/elements/button/button";
-import { getPricingPage } from "../../sanity/queries/page";
+import { getPricingPage } from "../../../sanity/queries/page";
 
 const PricingPage = async () => {
     const data = await getPricingPage();

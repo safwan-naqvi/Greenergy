@@ -1,5 +1,5 @@
 import Section from "@/components/layouts/section/Section";
-import { getHomepage } from "../../../sanity/queries/page";
+import { getHomepage } from "../../../../sanity/queries/page";
 import Container from "@/components/layouts/container/Container";
 import SubTitle from "@/components/elements/sub-title/SubTitle";
 import Heading from "@/components/elements/heading/Heading";

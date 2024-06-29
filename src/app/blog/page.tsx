@@ -3,7 +3,7 @@ export const revalidate = 0;
 import Heading from "@/components/elements/heading/Heading";
 import Container from "@/components/layouts/container/Container";
 import Section from "@/components/layouts/section/Section";
-import { getBlogPage } from "@/sanity/queries/page";
+import { getBlogPage } from "../../../sanity/queries/page";
 import Image from "next/image";
 import Link from "next/link";
 

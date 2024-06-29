@@ -8,8 +8,8 @@ import { FaLinkedin } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
 import { default as ImageUrlBuilder } from "@sanity/image-url";
-import { client } from "@/sanity/lib/client";
-import { getPostDetail } from "@/sanity/queries/page";
+import { client } from "../../../../sanity/lib/client";
+import { getPostDetail } from "../../../../sanity/queries/page";
 import { IoArrowBackCircle, IoShare } from "react-icons/io5";
 import { Button } from "@/components/elements/button/button";
 

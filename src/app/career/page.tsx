@@ -3,7 +3,7 @@ import { Button } from "@/components/elements/button/button";
 import Heading from "@/components/elements/heading/Heading";
 import Container from "@/components/layouts/container/Container";
 import Section from "@/components/layouts/section/Section";
-import { getCareerpage } from "@/sanity/queries/page";
+import { getCareerpage } from "../../../sanity/queries/page";
 import Link from "next/link";
 import { RxArrowTopRight } from "react-icons/rx";
 import { HiLocationMarker } from "react-icons/hi";

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import Marquee from 'react-fast-marquee'
-import { getHomepage } from '../../../sanity/queries/page'
+import { getHomepage } from '../../../../sanity/queries/page'
 
 const Hero = async () => {
     const data = await getHomepage();

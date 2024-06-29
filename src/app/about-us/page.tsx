@@ -9,8 +9,8 @@ import { FaLinkedin } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { getAboutpage } from "@/sanity/queries/page";
-import { AboutUsType } from "@/sanity/schemaTypes/aboutUs";
+import { getAboutpage } from "../../../sanity/queries/page";
+import { AboutUsType } from "../../../sanity/schemaTypes/aboutUs";
 
 const AboutUs = async () => {
     const data: AboutUsType = await getAboutpage();
