@@ -2,7 +2,7 @@ import { groq } from "next-sanity";
 import { client } from "../lib/client";
 
 export async function getHomepage() {
-    const getPageQuery = groq`*[_type == "page"][slug == 'home'][0]{
+  const getPageQuery = groq`*[_type == "page"][slug == 'home'][0]{
     slug,
 
     'hero':pageBuilder[][_type == "hero"][0]{
@@ -67,13 +67,13 @@ export async function getHomepage() {
   
 }`;
 
-    return await client.fetch(getPageQuery, {
-        revalidate: new Date().getSeconds(),
-    });
+  return await client.fetch(getPageQuery, {
+    revalidate: new Date().getSeconds(),
+  });
 }
 
 export async function getAboutpage() {
-    const getPageQuery = groq`*[_type == "page"][slug == 'about-us'][0]{
+  const getPageQuery = groq`*[_type == "page"][slug == 'about-us'][0]{
     slug,
 
     'hero':pageBuilder[][_type == "hero"][0]{
@@ -107,19 +107,20 @@ export async function getAboutpage() {
       'link': cta.link, 
       'image': image.asset-> url,
       tagline,
-      heading
+      heading,
+      excerpt
       }
     },
   
 }`;
 
-    return await client.fetch(getPageQuery, {
-        revalidate: new Date().getSeconds(),
-    });
+  return await client.fetch(getPageQuery, {
+    revalidate: new Date().getSeconds(),
+  });
 }
 
 export async function getCareerpage() {
-    const getPageQuery = groq`*[_type == "page"][slug == 'career'][0]{
+  const getPageQuery = groq`*[_type == "page"][slug == 'career'][0]{
 
     
     'hero':pageBuilder[][_type == "hero"][0]{
@@ -138,13 +139,13 @@ export async function getCareerpage() {
     },
 
     }`;
-    return await client.fetch(getPageQuery, {
-        revalidate: new Date().getSeconds(),
-    });
+  return await client.fetch(getPageQuery, {
+    revalidate: new Date().getSeconds(),
+  });
 }
 
 export async function getPricingPage() {
-    const getPageQuery = groq`*[_type == "page"][slug == 'pricing'][0]{
+  const getPageQuery = groq`*[_type == "page"][slug == 'pricing'][0]{
 
     
     'hero':pageBuilder[][_type == "hero"][0]{
@@ -179,12 +180,12 @@ export async function getPricingPage() {
     },
 
     }`;
-    return await client.fetch(getPageQuery, {
-        revalidate: new Date().getSeconds(),
-    });
+  return await client.fetch(getPageQuery, {
+    revalidate: new Date().getSeconds(),
+  });
 }
 export async function getBlogPage() {
-    const getPageQuery = groq`*[_type == "post"][]
+  const getPageQuery = groq`*[_type == "post"][]
   {
     'categories': categories[]->title,
     'slug':slug.current,
@@ -201,12 +202,12 @@ export async function getBlogPage() {
     timeRead,
     'mainImage':mainImage.asset->url
   }`;
-    return await client.fetch(getPageQuery, {
-        revalidate: new Date().getSeconds(),
-    });
+  return await client.fetch(getPageQuery, {
+    revalidate: new Date().getSeconds(),
+  });
 }
 export async function getPostDetail(slug: string) {
-    const getPostDetailQuery = groq`*[_type == "post"][slug.current == $slug][0]{
+  const getPostDetailQuery = groq`*[_type == "post"][slug.current == $slug][0]{
     'categories': categories[]->title,
     'slug':slug.current,
     publishedAt,
@@ -223,8 +224,8 @@ export async function getPostDetail(slug: string) {
     'mainImage':mainImage.asset->url
   }`;
 
-    return await client.fetch(getPostDetailQuery, {
-        slug,
-        revalidate: new Date().getSeconds(),
-    });
+  return await client.fetch(getPostDetailQuery, {
+    slug,
+    revalidate: new Date().getSeconds(),
+  });
 }

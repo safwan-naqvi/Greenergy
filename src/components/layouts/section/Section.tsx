@@ -6,7 +6,7 @@ type SectionTYPES = {
 }
 const Section = ({ children, className }: SectionTYPES) => {
     return (
-        <section className={clsx("py-24 md:py-48", className)}>
+        <section className={clsx("py-24 md:py-32", className)}>
             {children}
         </section>
     )

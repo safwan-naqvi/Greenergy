@@ -24,7 +24,7 @@ const PricingPage = async () => {
                     <Heading as="h1" className="text-hero">
                         {hero.heading}
                     </Heading>
-                    <p className="max-w-xl">{hero.tagline}</p>
+                    <p className="max-w-xl text-lg font-light">{hero.tagline}</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-1 xl:grid-cols-3 my-12 sm:my-24 gap-8">
@@ -46,15 +46,15 @@ const PricingPage = async () => {
                                         Recommended
                                     </p>
                                 )}
-                                <span className="mb-4 text-sub-title">{plan}</span>
+                                <span className="mb-4 text-lg font-semibold tracking-tight">{plan}</span>
                                 <Heading
                                     as="h2"
-                                    className="text-features flex items-center gap-4"
+                                    className="text-7xl mt-4 flex items-center gap-4"
                                 >
-                                    {price}
-                                    <span className="text-label text-neutral-500">{time}</span>
+                                    ${price}
+                                    <span className="text-neutral-500 !text-[16px]">{time}</span>
                                 </Heading>
-                                <p className="mt-6">{desc}</p>
+                                <p className="mt-6 text-sm ">{desc}</p>
                                 <Button
                                     variant={recommended ? "tetriary-reversed" : "tetriary"}
                                     className="w-full mt-8 py-4"
@@ -81,15 +81,15 @@ const PricingPage = async () => {
                 </div>
 
                 <div className="p-10 shadow-xl bg-primary-300 rounded-3xl flex md:flex-row items-center flex-col gap-4">
-                    <div>
+                    <div className="self-start">
                         {/* <DynamicIcon name={consultation.icon} /> */}
-                        <FaLeaf />
+                        <FaLeaf className="h-8 w-8" />
                     </div>
                     <div className="">
-                        <Heading as="h3" className="font-medium text-label mb-2">
+                        <Heading as="h3" className="font-medium text-xl tracking-tight mb-2">
                             {consultation.heading}
                         </Heading>
-                        <p className="text-primary-9500">{consultation.excerpt}</p>
+                        <p className="text-primary-950 tracking-tight">{consultation.excerpt}</p>
                     </div>
 
                     <Button variant="primary" className="shrink-0 bg-white h-fit">

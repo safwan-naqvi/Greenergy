@@ -16,7 +16,7 @@ const AboutUs = async () => {
     const data: AboutUsType = await getAboutpage();
 
     const { ourExperts, ourPhilosophy, promotion, hero } = data;
-
+    console.log(ourExperts.ourExperts[0])
     return (
         <React.Fragment>
             <Section className="bg-white">
@@ -47,7 +47,7 @@ const AboutUs = async () => {
                 <Container>
                     <Heading
                         as="h2"
-                        className="text-section leading-none capitalize mb-24"
+                        className="text-3xl font-semibold tracking-tighter leading-none capitalize mb-24"
                     >
                         {ourPhilosophy.heading}
                     </Heading>
@@ -56,11 +56,11 @@ const AboutUs = async () => {
                             return (
                                 <div
                                     key={index}
-                                    className="grid md:grid-cols-2 py-12 bg-primary-300 p-4 rounded-3xl"
+                                    className="grid md:grid-cols-2 py-12 bg-primary-300 p-8 rounded-3xl"
                                 >
                                     <div>
-                                        <span>{item.tagline}</span>
-                                        <Heading as="h4" className="text-title leading-none">
+                                        <span className="text-md">{item.tagline}</span>
+                                        <Heading as="h4" className="text-2xl font-semibold leading-none">
                                             {item.heading}
                                         </Heading>
                                     </div>
@@ -78,7 +78,7 @@ const AboutUs = async () => {
                 <Container>
                     <Heading
                         as="h2"
-                        className="text-section leading-none capitalize mb-24"
+                        className="text-3xl font-semibold tracking-tighter leading-none capitalize mb-24"
                     >
                         A Team of Energy Experts
                     </Heading>
@@ -96,6 +96,7 @@ const AboutUs = async () => {
                                         width={320}
                                         height={450}
                                         className="w-full h-full object-cover"
+                                        quality={90}
                                     />
                                     <div className="absolute group bottom-2 overflow-hidden px-2  backdrop-blur-2xl w-full">
                                         <div className="bg-primary-300 flex-col group-hover:h-[240px] min-h-10 h-0 duration-300 px-6 py-2  flex justify-between rounded-xl">
@@ -112,7 +113,7 @@ const AboutUs = async () => {
                                                 </Link>
                                             </div>
                                             <ul className="h-0 translate-y-3 my-4 group-hover:translate-y-0 group-hover:h-full duration-300">
-                                                <li className="text-sub-title">{expert.excerpt}</li>
+                                                <li className="text-md">{expert.excerpt}</li>
                                             </ul>
                                         </div>
                                     </div>
