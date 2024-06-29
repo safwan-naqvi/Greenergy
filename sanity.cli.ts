@@ -3,10 +3,8 @@
 * Go to https://www.sanity.io/docs/cli to learn more.
 **/
 import { defineCliConfig } from 'sanity/cli'
-import * as dotenv from "dotenv"
-dotenv.config()
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production"
-
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
+console.log(projectId + " " + dataset)
 export default defineCliConfig({ api: { projectId, dataset } })
