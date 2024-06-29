@@ -6,7 +6,7 @@ import Features from "@/components/sections/features/Features";
 import Hero from "@/components/sections/hero/Hero";
 import Metrics from "@/components/sections/metrics/Metrics";
 import OurExperts from "@/components/sections/our-experts/OurExperts";
-import Testimonial from "@/components/sections/testimonial/Testimonial";
+import { Testimonials } from "@/components/sections/testimonial/Testimonial";
 export default function Home() {
   return (
     <main className="no-scrollbar">
@@ -17,7 +17,7 @@ export default function Home() {
       <AboutUs />
       <Metrics />
       <div className="p-2 md:p-4">
-        <Testimonial />
+        <Testimonials />
       </div>
       <OurExperts />
       <div className="p-4 bg-secondary-950">

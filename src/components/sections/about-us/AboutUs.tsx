@@ -1,8 +1,11 @@
 import React from 'react'
 import { FaCheckCircle } from 'react-icons/fa'
 import AboutUsCarousel from './AboutUsCarousel'
+import { getHomepage } from '../../../../sanity/queries/page'
 
-const AboutUs = () => {
+const AboutUs = async () => {
+    const data = await getHomepage()
+    const { aboutUs } = data
     return (
         <section className='py-48 bg-secondary-950'>
             <div className='container'>
@@ -12,9 +15,9 @@ const AboutUs = () => {
                 </div>
                 <div className='grid xl:grid-cols-2 gap-12 md:gap-36'>
                     <div className='flex justify-start flex-col gap-6'>
-                        <h2 className='text-white text-2xl tracking-tight leading-none'>Committed to a sustainable future</h2>
+                        <h2 className='text-white text-2xl tracking-tight leading-none'>{aboutUs?.heading}</h2>
                         <p className='text-white/90'>
-                            As a pioneering force in the green energy sector, we've been at the forefront of the transition to clean, renewable power sources. Our mission is simple yet profound: to create a world where energy is not only abundant but also environmentally responsible. We believe that by harnessing the power of nature, we can power the world and protect it simultaneously.
+                            {aboutUs?.excerpt}
                         </p>
                         <ul className='mt-4 grid grid-cols-2 xl:grid-cols-1 gap-4'>
                             <li className='flex items-center gap-3 text-white text-md font-light'>
@@ -36,7 +39,7 @@ const AboutUs = () => {
                         </ul>
                     </div>
                     <div className='col-span-1'>
-                        <AboutUsCarousel />
+                        <AboutUsCarousel images={aboutUs.slider} />
                     </div>
                 </div>
             </div>
