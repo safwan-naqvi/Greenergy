@@ -2,15 +2,15 @@
   "header": [
     {
       "label": "about us",
-      "href": "/about"
+      "href": "/about-us"
     },
     {
-      "label": "team",
-      "href": "/team"
+      "label": "Pricing",
+      "href": "/pricing"
     },
     {
-      "label": "solutions",
-      "href": "/solutions"
+      "label": "Career",
+      "href": "/career"
     },
     {
       "label": "blog",
