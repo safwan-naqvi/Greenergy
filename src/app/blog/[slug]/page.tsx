@@ -3,7 +3,7 @@ import Heading from "@/components/elements/heading/Heading";
 // import ShareSocialList from "@/components/elements/share/share-social";
 import Container from "@/components/layouts/container/Container";
 import Section from "@/components/layouts/section/Section";
-import { client } from "../../../../sanity/lib/client";
+import { client } from "../../../sanity/lib/client";
 import console from "console";
 import { PortableText, PortableTextComponents } from "next-sanity";
 import { FaLinkedin } from "react-icons/fa6";

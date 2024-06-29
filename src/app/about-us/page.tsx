@@ -6,11 +6,11 @@ import Section from "@/components/layouts/section/Section";
 import NewsLetter from "@/components/newsletter/NewsLetter";
 /* eslint-disable react/no-unescaped-entities */
 import { FaLinkedin } from "react-icons/fa6";
-import { getAboutpage } from "@/sanity/queries/page";
-import { AboutUsType } from "@/sanity/schemaTypes/aboutUs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { getAboutpage } from "@/sanity/queries/page";
+import { AboutUsType } from "@/sanity/schemaTypes/aboutUs";
 
 const AboutUs = async () => {
     const data: AboutUsType = await getAboutpage();

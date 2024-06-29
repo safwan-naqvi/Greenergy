@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaCheckCircle } from 'react-icons/fa'
 import AboutUsCarousel from './AboutUsCarousel'
-import { getHomepage } from '../../../../sanity/queries/page'
+import { getHomepage } from '../../../sanity/queries/page'
 
 const AboutUs = async () => {
     const data = await getHomepage()
